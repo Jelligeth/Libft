@@ -6,11 +6,11 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 15:50:18 by dliu          #+#    #+#                 */
-/*   Updated: 2022/12/15 13:42:03 by dliu          ########   odam.nl         */
+/*   Updated: 2023/02/08 12:47:23 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 #include <fcntl.h>
 #include <stdio.h>
 
