@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/07 14:50:30 by dliu          ########   odam.nl         */
+/*   Updated: 2023/02/08 13:10:19 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@
 # define ANSI_COL_CYAN "\x1b[36m"
 # define ANSI_COL_RESET "\x1b[0m"
 
-char		*get_next_line(int fd);
 
 typedef struct a_list
 {
@@ -80,6 +79,8 @@ void		apply_flags_chars(t_print *tab);
 void		apply_flags_num(t_print *tab);
 void		apply_flags_hex(t_print *tab);
 void		check_write(t_print *tab);
+
+char		*get_next_line(int fd);
 
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
