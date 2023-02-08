@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/08 13:10:19 by dliu          ########   odam.nl         */
+/*   Updated: 2023/02/08 14:58:01 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdio.h>
-# include <errno.h>
 # include <stdbool.h>
 
 # ifndef BUFFER_SIZE
