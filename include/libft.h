@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/08 14:58:01 by dliu          ########   odam.nl         */
+/*   Updated: 2023/02/08 14:58:33 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@
 # define ANSI_COL_MAGENTA "\x1b[35m"
 # define ANSI_COL_CYAN "\x1b[36m"
 # define ANSI_COL_RESET "\x1b[0m"
-
 
 typedef struct a_list
 {
