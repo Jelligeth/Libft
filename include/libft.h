@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/08 14:58:33 by dliu          ########   odam.nl         */
+/*   Updated: 2023/02/14 11:33:50 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -255,6 +255,10 @@ int			ft_min(int a, int b, int min);
  * Compares a to b and returns the smallest value, or a if they are equal.
 */
 int			ft_smallest(int a, int b);
+/**
+ * Compares a to b and returns the biggest value, or a if they are equal.
+*/
+int			ft_biggest(int a, int b);
 /**
  * Counts and returns the length of the number n in the given base.
 */

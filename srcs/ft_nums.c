@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/04 20:59:48 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/01 12:01:05 by dliu          ########   odam.nl         */
+/*   Updated: 2023/02/14 11:34:03 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,13 @@ int	ft_min(int a, int b, int min)
 int	ft_smallest(int a, int b)
 {
 	if (a <= b)
+		return (a);
+	return (b);
+}
+
+int	ft_biggest(int a, int b)
+{
+	if (a >= b)
 		return (a);
 	return (b);
 }
