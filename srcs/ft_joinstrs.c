@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   other.c                                            :+:    :+:            */
+/*   ft_joinstrs.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/12/16 16:10:56 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/20 14:12:38 by dliu          ########   odam.nl         */
+/*   Created: 2023/02/20 13:31:04 by dliu          #+#    #+#                 */
+/*   Updated: 2023/02/20 14:00:51 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+char	*ft_joinstrs(int count, ...)
 {
+	int		i;
+	char	*tmp;
+	char	*joined;
 	char	*string;
+	va_list	args;
 
-	string = ft_joinstrs(4, "this", "is", "a", "string");
-	ft_putendl_fd(string, STDOUT_FILENO);
-	free(string);
+	va_start(args, count);
+	i = 0;
+	joined = NULL;
+	while (i < count)
+	{
+		string = va_arg(args, char *);
+		if (!string)
+		{
+			free(joined);
+			return (NULL);
+		}
+		tmp = ft_strjoin(joined, string);
+		free(joined);
+		joined = tmp;
+		i++;
+	}
+	va_end(args);
+	return (joined);
 }
