@@ -6,14 +6,14 @@
 #    By: dliu <dliu@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/27 17:13:11 by dliu          #+#    #+#                  #
-#    Updated: 2023/02/20 14:08:48 by dliu          ########   odam.nl          #
+#    Updated: 2023/03/07 18:59:32 by dliu          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = test
 CC = gcc
 CFLAGS = #-Wall -Werror -Wextra
-SRCS = other.c
+SRCS = test.c
 LIBDIR = ..
 HEADERS = -I $(LIBDIR)/include
 LIBFT = $(LIBDIR)/libft.a

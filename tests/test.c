@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   other.c                                            :+:    :+:            */
+/*   test.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/16 16:10:56 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/20 14:12:38 by dliu          ########   odam.nl         */
+/*   Updated: 2023/03/07 19:00:09 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int	main(void)
 {
-	char	*string;
-
-	string = ft_joinstrs(4, "this", "is", "a", "string");
-	ft_putendl_fd(string, STDOUT_FILENO);
-	free(string);
+	ft_printf("%d\n", ft_distance(-2, 5));
 }
