@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/03/07 18:58:00 by dliu          ########   odam.nl         */
+/*   Updated: 2023/03/14 17:56:24 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,7 +266,7 @@ int			ft_numlen(long long n, int base);
 /**
  * Returns distance between a and b
 */
-unsigned int	ft_distance(int a, int b);
+size_t		ft_distance(int a, int b);
 
 /**
  * Splits a string into an array of strings allocated with malloc(3).

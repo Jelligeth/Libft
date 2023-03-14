@@ -6,20 +6,20 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/04 20:59:48 by dliu          #+#    #+#                 */
-/*   Updated: 2023/03/07 19:00:47 by dliu          ########   odam.nl         */
+/*   Updated: 2023/03/14 17:56:48 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-unsigned int	ft_distance(int a, int b)
+size_t	ft_distance(int a, int b)
 {
-	long long dist;
+	long long	dist;
 
 	dist = a - b;
 	if (dist < 0)
 		dist *= -1;
-	return ((unsigned int)dist);
+	return ((size_t)dist);
 }
 
 int	ft_numlen(long long n, int base)
