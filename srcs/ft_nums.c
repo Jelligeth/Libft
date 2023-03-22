@@ -6,9 +6,21 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/04 20:59:48 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/01 12:01:05 by dliu          ########   odam.nl         */
+/*   Updated: 2023/03/14 17:56:48 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
+
+size_t	ft_distance(int a, int b)
+{
+	long long	dist;
+
+	dist = a - b;
+	if (dist < 0)
+		dist *= -1;
+	return ((size_t)dist);
+}
 
 int	ft_numlen(long long n, int base)
 {
@@ -37,6 +49,13 @@ int	ft_min(int a, int b, int min)
 int	ft_smallest(int a, int b)
 {
 	if (a <= b)
+		return (a);
+	return (b);
+}
+
+int	ft_biggest(int a, int b)
+{
+	if (a >= b)
 		return (a);
 	return (b);
 }

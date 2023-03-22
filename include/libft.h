@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/08 14:58:33 by dliu          ########   odam.nl         */
+/*   Updated: 2023/03/14 17:56:24 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,15 +256,29 @@ int			ft_min(int a, int b, int min);
 */
 int			ft_smallest(int a, int b);
 /**
+ * Compares a to b and returns the biggest value, or a if they are equal.
+*/
+int			ft_biggest(int a, int b);
+/**
  * Counts and returns the length of the number n in the given base.
 */
 int			ft_numlen(long long n, int base);
+/**
+ * Returns distance between a and b
+*/
+size_t		ft_distance(int a, int b);
 
 /**
  * Splits a string into an array of strings allocated with malloc(3).
  * Splits will be delimited by white spaces, unless within quotation marks.
 */
 char		**ft_split2(char *s);
+
+/**
+ * Uses malloc, joins multiple strings together.
+ * @param count The amount of strings to join.
+*/
+char		*ft_joinstrs(int count, ...);
 
 void		ft_error(char *errstr);
 void		ft_perror(char *progname, char *err, char *messsage);

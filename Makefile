@@ -6,7 +6,7 @@
 #    By: dliu <dliu@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/05 15:18:01 by dliu          #+#    #+#                  #
-#    Updated: 2023/02/08 13:18:29 by dliu          ########   odam.nl          #
+#    Updated: 2023/02/20 13:59:19 by dliu          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ ft_put_fd.c ft_is.c ft_converts.c \
 ft_calloc.c ft_bzero.c ft_mem.c \
 ft_strhelpers.c ft_strfinds.c ft_strmakers.c ft_strmanips.c ft_split.c ft_itoa.c \
 ft_lltoa_base.c ft_ltoa_unsigned_base.c ft_atoi_validate.c ft_nums.c \
-ft_split2.c ft_nopes.c ft_free.c
+ft_split2.c ft_joinstrs.c ft_nopes.c ft_free.c
 OBJDIR = obj/
 OBJS := ${SRCS:%.c=$(OBJDIR)%.o}
 

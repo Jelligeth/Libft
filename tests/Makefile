@@ -6,15 +6,15 @@
 #    By: dliu <dliu@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/27 17:13:11 by dliu          #+#    #+#                  #
-#    Updated: 2023/02/08 12:47:23 by dliu          ########   odam.nl          #
+#    Updated: 2023/03/07 18:59:32 by dliu          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = test
 CC = gcc
 CFLAGS = #-Wall -Werror -Wextra
-SRCS = other.c
-LIBDIR = ../
+SRCS = test.c
+LIBDIR = ..
 HEADERS = -I $(LIBDIR)/include
 LIBFT = $(LIBDIR)/libft.a
 
@@ -25,9 +25,8 @@ all: $(LIBFT) $(NAME)
 $(LIBFT):
 	$(MAKE) -C $(LIBDIR)
 
-$(NAME): $(SRCS)
-	$(CC) $(CFLAGS) $(HEADERS) $^ -fsanitize=address -g -o $@
-
+$(NAME): $(SRCS) $(LIBFT)
+	$(CC) $(CFLAGS) $(HEADERS) $(LIBFT) $^ -fsanitize=address -g -o $@
 
 clean:
 	$(MAKE) clean -C $(LIBDIR)
