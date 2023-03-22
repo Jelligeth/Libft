@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/05 16:13:54 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 17:49:26 by dliu          ########   odam.nl         */
+/*   Updated: 2023/03/22 17:20:35 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_atoi_validate(char *check_me, int *num)
 	long long	convert;
 
 	i = 0;
-	if (check_me[i] == '-')
+	if (check_me[i] == '-' || check_me[i] == '+')
 		i++;
 	while (check_me[i])
 	{
