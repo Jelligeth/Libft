@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/03/14 17:56:24 by dliu          ########   odam.nl         */
+/*   Updated: 2023/04/10 16:15:45 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -245,6 +245,7 @@ char		*ft_ltoa_unsigned_base(unsigned long num, int base);
  * @param num The address of an int in which to store the converted number.
  * @returns 0 if invalid, 1 if valid.
 */
+bool		ft_valid_atoi(char *check_me, int *num);
 int			ft_atoi_validate(char *check_me, int *num);
 
 /**
