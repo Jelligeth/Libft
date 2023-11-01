@@ -6,12 +6,13 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 19:03:29 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/07 15:37:38 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:45:43 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Allocates (with malloc(3)) and returns a duplicate of a string
 char	*ft_strdup(const char *s1)
 {
 	char	*string;
@@ -29,6 +30,7 @@ char	*ft_strdup(const char *s1)
 	return (NULL);
 }
 
+//Joins two strings. Allocates (with malloc(3)).
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -45,6 +47,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
+/**
+ * Allocates (with malloc(3)) and returns a substring from a string.
+ * @param s The string from which to create the substring.
+ * @param start The start index of the substrign in the string 's'
+ * @param len The maximum length of the substring.
+ * @returns The substring. NULL if the allocation fails.
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*str;
@@ -69,6 +78,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (NULL);
 }
 
+/**
+ * Allocates (with malloc(3)) and returns a copy of s1 with chars in set removed
+ * from the beginning and end of the string.
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char		*string;
@@ -95,6 +108,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (string);
 }
 
+//Allocates (with malloc(3)) and returns a string with repeating characters.
 char	*ft_strrep(const char c, const size_t len)
 {
 	char	*str;

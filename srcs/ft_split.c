@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/13 15:48:52 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 14:07:11 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:39:36 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 static size_t	split_count(const char *s, char c);
 static char		**split(const char *s, char c, char **strings, size_t count);
 
+/**
+ * Splits a string into an array of strings allocated (with malloc(3)).
+ * @param s The string to be split.
+ * @param c The delimiter character.
+ * @return The array of new strings ending with a NULL pointer
+ * or NULL if the allocation fails.
+*/
 char	**ft_split(const char *s, char c)
 {
 	char	**strings;

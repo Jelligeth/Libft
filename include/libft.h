@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/04/10 16:15:45 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:51:23 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,191 +99,52 @@ int			ft_tolower(int c);
 
 void		*ft_calloc(size_t count, size_t size);
 void		ft_bzero(void *s, size_t n);
-/**
- * Locates the first occurance of c in s.
- * @param s Pointer to the first char in a string.
- * @param c The character to find in the string.
- * @param n The maximum amount of bytes to check. 
- * @returns A pointer to the byte located or NULL if not found.
-*/
+
 void		*ft_memchr(const void *s, int c, size_t n);
-/**
- * Compares byte string s1 against byte string s2. Both strings are assumed to
- * be n bytes long.
- * @returns The difference between the bytes, treated as unsigned char values.
-*/
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
-/**
- * Writes len bytes of value c to the string b.
- * @param b Void pointer converted to an unsigned char pointer.
- * @param c Int value of character converted to unsigned char.
- * @returns Returns b.
-*/
 void		*ft_memset(void *str, int c, size_t n);
-/**
- * Copies n bytes from memory area src to memory area dst.
- * Overlap behavior is undefined, use memmove instead.
-*/
 void		*ft_memcpy(void *dst, const void *src, size_t n);
-/**
- * Copies len bytes from src to dst in a non-destructive manner.
- * @returns the original value of dst.
-*/
 void		*ft_memmove(void *dst, const void *src, size_t len);
 
 size_t		ft_strlen(const char *s);
-/**
- * Counts and returns the amount of strings in a string array.
-*/
 size_t		ft_strarray_count(char **s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-/**
- * Locates the first occurrence of c (converted to a char) in a string.
- * @param s Pointer to first character in a string.
- * @param c The character to locate.
- * @returns A pointer to the located character or NULL if it does not appear.
-*/
 char		*ft_strchr(const char *s, int c);
-/**
- * Locates the last occurrence of c (converted to a char) in a string.
- * @param s Pointer to first character in a string.
- * @param c The character to locate.
- * @returns A pointer to the located character or NULL if it does not appear.
-*/
 char		*ft_strrchr(const char *s, int c);
-/**
- * Locates the first occurrence of a string in another string.
- * @param haystack The string to search in.
- * @param needle The string to locate.
- * @param len The maximum length to search.
- * @returns Haystack if needle is empty. Null if Needle not found.
- * Else pointer to the first character of the first occurrence of needle.
-*/
 char		*ft_strnstr(const char *haystack, const char*needle, size_t len);
-/**
- * Lexicographically compares two strings.
- * @returns The difference between the strings if found or 0 if no diff found.
-*/
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 
-/**
- * Copies a string from src to dst. Guarantees NUL-termination if there is space.
- * @returns The total length of the string attempted to be created.
-*/
 char		*ft_strdup(const char *s1);
 char		*ft_strjoin(char const *s1, char const *s2);
-/**
- * Allocates (with malloc(3)) and returns a substring from a string.
- * @param s The string from which to create the substring.
- * @param start The start index of the substrign in the string 's'
- * @param len The maximum length of the substring.
- * @returns The substring. NULL if the allocation fails.
-*/
 char		*ft_substr(char const *s, unsigned int start, size_t len);
-/**
- * Allocates (with malloc(3)) and returns a copy of s1 with chars in set removed
- * from the beginning and end of the string.
-*/
 char		*ft_strtrim(char const *s1, char const *set);
-/**
- * Allocates (with malloc(3)) and returns a string with repeating characters.
-*/
 char		*ft_strrep(const char c, const size_t len);
 
-/**
- * Applies the function f to each character of the string s and creates a new
- * string (with malloc(3)).
- * @param s The string on which to iterate.
- * @param f The funciton to apply to each character.
- * @returns The strign created from the successive application of f
- * of NULL if allocation fails.
-*/
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-/**
- * Applies the function f on each char of a string.
- * @param s The string on which to iterate.
- * @param f The function to apply to each character.
-*/
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
-/**
- * Reverses the string in place.
-*/
 char		*ft_strrev(char *string);
 
-/**
- * Splits a string into an array of strings allocated (with malloc(3)).
- * @param s The string to be split.
- * @param c The delimiter character.
- * @return The array of new strings ending with a NULL pointer
- * or NULL if the allocation fails.
-*/
 char		**ft_split(const char *s, char c);
+char		**ft_split2(char *s);
+char		*ft_joinstrs(int count, ...);
 
-/**
- * Allocates (with malloc(3)) and returns a string
- * representing the integer received as an argument.
- */
 char		*ft_itoa(int n);
-
-/**
- * Allocates (with malloc(3)) and returns a string
- * representing the number received as an argument.
- */
 char		*ft_lltoa_base(long long n, int base);
-/**
- * Allocates (with malloc(3)) and returns a string
- * representing the unsigned number received as an argument.
- * Negative numbers will not be handled.
- */
 char		*ft_ltoa_unsigned_base(unsigned long num, int base);
 
-/**
- * Checks, converts and stores to address a valid int from a string.
- * @param check_me The string to check and convert.
- * @param num The address of an int in which to store the converted number.
- * @returns 0 if invalid, 1 if valid.
-*/
 bool		ft_valid_atoi(char *check_me, int *num);
 int			ft_atoi_validate(char *check_me, int *num);
 
-/**
- * Compares the result of a - b with min and returns the smallest one.
-*/
-int			ft_min(int a, int b, int min);
-/**
- * Compares a to b and returns the smallest value, or a if they are equal.
-*/
+int			ft_abs(int num);
 int			ft_smallest(int a, int b);
-/**
- * Compares a to b and returns the biggest value, or a if they are equal.
-*/
 int			ft_biggest(int a, int b);
-/**
- * Counts and returns the length of the number n in the given base.
-*/
 int			ft_numlen(long long n, int base);
-/**
- * Returns distance between a and b
-*/
 size_t		ft_distance(int a, int b);
 
-/**
- * Splits a string into an array of strings allocated with malloc(3).
- * Splits will be delimited by white spaces, unless within quotation marks.
-*/
-char		**ft_split2(char *s);
-
-/**
- * Uses malloc, joins multiple strings together.
- * @param count The amount of strings to join.
-*/
-char		*ft_joinstrs(int count, ...);
-
 void		ft_error(char *errstr);
-void		ft_perror(char *progname, char *err, char *messsage);
-void		ft_pdebug(int c);
+void		ft_perror(char *progname, char *funcname, char *messsage);
 
 void		ft_free(void *content);
 void		ft_free_strarr(char **array);

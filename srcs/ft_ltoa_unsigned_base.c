@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 12:21:22 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 13:58:29 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:36:44 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 static void	ltoa_extend(unsigned long num, char *buffer, int len, int base);
 
+/**
+ * Allocates (with malloc(3)) and returns a string
+ * representing the unsigned number received as an argument.
+ * Negative numbers will not be handled.
+ */
 char	*ft_ltoa_unsigned_base(unsigned long num, int base)
 {
 	char			*buffer;

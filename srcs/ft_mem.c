@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memchr.c                                        :+:    :+:            */
+/*   ft_mem.c                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 15:14:45 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 14:20:57 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:51:20 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * Locates the first occurance of c in s.
+ * @param s Pointer to the first char in a string.
+ * @param c The character to find in the string.
+ * @param n The maximum amount of bytes to check. 
+ * @returns A pointer to the byte located or NULL if not found.
+*/
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*z;
@@ -29,6 +36,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
+/**
+ * Compares byte string s1 against byte string s2. Both strings are assumed to
+ * be n bytes long.
+ * @returns The difference between the bytes, treated as unsigned char values.
+*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
@@ -47,6 +59,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
+/**
+ * Copies n bytes from memory area src to memory area dst.
+ * Overlap behavior is undefined, use memmove instead.
+*/
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*cdst;
@@ -87,6 +103,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
+/**
+ * Writes len bytes of value c to the string b.
+ * @param b Void pointer converted to an unsigned char pointer.
+ * @param c Int value of character converted to unsigned char.
+ * @returns Returns b.
+*/
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;

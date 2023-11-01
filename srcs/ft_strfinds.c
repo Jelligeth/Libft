@@ -6,12 +6,18 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 17:10:10 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 17:05:19 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:47:08 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Locates the first occurrence of c (converted to a char) in a string.
+ * @param s Pointer to first character in a string.
+ * @param c The character to locate.
+ * @returns A pointer to the located character or NULL if it does not appear.
+*/
 char	*ft_strchr(const char *s, int c)
 {
 	int	len;
@@ -20,6 +26,12 @@ char	*ft_strchr(const char *s, int c)
 	return (ft_memchr(s, c, len + 1));
 }
 
+/**
+ * Locates the last occurrence of c (converted to a char) in a string.
+ * @param s Pointer to first character in a string.
+ * @param c The character to locate.
+ * @returns A pointer to the located character or NULL if it does not appear.
+*/
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	ch;
@@ -37,6 +49,14 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
+/**
+ * Locates the first occurrence of a string in another string.
+ * @param haystack The string to search in.
+ * @param needle The string to locate.
+ * @param len The maximum length to search.
+ * @returns Haystack if needle is empty. Null if Needle not found.
+ * Else pointer to the first character of the first occurrence of needle.
+*/
 char	*ft_strnstr(const char *haystack, const char*needle, size_t len)
 {
 	size_t	i;
@@ -59,6 +79,10 @@ char	*ft_strnstr(const char *haystack, const char*needle, size_t len)
 	return (NULL);
 }
 
+/**
+ * Lexicographically compares two strings.
+ * @returns The difference between the strings if found or 0 if no diff found.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

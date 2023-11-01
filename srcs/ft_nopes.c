@@ -6,12 +6,16 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/12 16:57:09 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/07 15:09:46 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:21:37 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Prints an error message and exits with exit code EXIT_FAILURE.
+ * NULL inputs will be skipped.
+*/
 void	ft_error(char *errmsg)
 {
 	if (errmsg)
@@ -19,23 +23,22 @@ void	ft_error(char *errmsg)
 	exit(EXIT_FAILURE);
 }
 
-void	ft_perror(char *progname, char *err, char *messsage)
+/**
+ * Prints an error message based on inputs. 
+ * NULL inputs will be skipped.
+*/
+void	ft_perror(char *progname, char *funcname, char *messsage)
 {
 	if (progname)
 	{
 		ft_putstr_fd(progname, STDERR_FILENO);
 		ft_putstr_fd(": ", STDERR_FILENO);
 	}
-	if (err)
+	if (funcname)
 	{
-		ft_putstr_fd(err, STDERR_FILENO);
+		ft_putstr_fd(funcname, STDERR_FILENO);
 		ft_putstr_fd(": ", STDERR_FILENO);
 	}
 	if (messsage)
 		ft_putendl_fd(messsage, STDERR_FILENO);
-}
-
-void	ft_pdebug(int c)
-{
-	ft_printf("%d:DEBUGGING\n", c);
 }

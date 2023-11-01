@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 18:22:25 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/26 14:06:29 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:48:27 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (len);
 }
 
+//Counts and returns the amount of strings in a NULL terminated string array.
 size_t	ft_strarray_count(char **s)
 {
 	size_t	count;

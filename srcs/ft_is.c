@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:17:45 by dliu          #+#    #+#                 */
-/*   Updated: 2022/12/14 16:04:33 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 14:33:04 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-int	ft_isascii(int c)
+int	ft_isspace(int c)
 {
-	if (c >= 0 && c <= 127)
+	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\r')
 		return (1);
 	return (0);
 }

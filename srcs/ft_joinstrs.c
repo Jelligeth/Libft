@@ -6,12 +6,16 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/20 13:31:04 by dliu          #+#    #+#                 */
-/*   Updated: 2023/02/20 14:00:51 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:23:14 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Uses malloc, joins multiple strings together.
+ * @param count The amount of strings to join.
+*/
 char	*ft_joinstrs(int count, ...)
 {
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/13 15:48:52 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 18:24:20 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:24:10 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 static size_t	split_count(char *s);
 static char		*extract(char **s);
 
+/**
+ * Splits a string into an array of strings allocated with malloc(3).
+ * Splits will be delimited by white spaces, unless within quotation marks.
+*/
 char	**ft_split2(char *s)
 {
 	char	**strings;

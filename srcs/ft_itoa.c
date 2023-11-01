@@ -6,12 +6,16 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 12:21:22 by dliu          #+#    #+#                 */
-/*   Updated: 2022/12/14 16:42:16 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:38:57 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Allocates (with malloc(3)) and returns a string
+ * representing the integer received as an argument.
+ */
 char	*ft_itoa(int n)
 {
 	int				len;

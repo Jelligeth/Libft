@@ -6,12 +6,18 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/05 16:13:54 by dliu          #+#    #+#                 */
-/*   Updated: 2023/04/10 16:14:51 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 15:35:52 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Checks, converts and stores to address a valid int from a string.
+ * @param check_me The string to check and convert.
+ * @param num The address of an int in which to store the converted number.
+ * @returns 0 if invalid, 1 if valid.
+*/
 int	ft_atoi_validate(char *check_me, int *num)
 {
 	int			i;
@@ -35,6 +41,12 @@ int	ft_atoi_validate(char *check_me, int *num)
 	return (1);
 }
 
+/**
+ * Checks, converts and stores to address a valid int from a string.
+ * @param check_me The string to check and convert.
+ * @param num The address of an int in which to store the converted number.
+ * @returns 0 if invalid, 1 if valid.
+*/
 bool	ft_valid_atoi(char *check_me, int *num)
 {
 	int			i;
