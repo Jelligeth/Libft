@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/01 16:17:12 by dliu          #+#    #+#                 */
-/*   Updated: 2022/12/12 20:30:00 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 16:02:27 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ int	set_flags(t_print *tab, const char *format)
 			tab->zero = 1;
 		i++;
 	}
-	i += set_width(&(tab->width_min), &format[i]);
+	i += set_width(&(tab->w_min), &format[i]);
 	if (format[i] == '.')
 	{
 		tab->dot = 1;
 		i++;
-		i += set_width(&(tab->width_precision), &format[i]);
+		i += set_width(&(tab->w_precise), &format[i]);
 	}
 	return (i);
 }
@@ -66,23 +66,23 @@ void	apply_flags_chars(t_print *tab)
 	char	*extra;
 	int		len;
 
-	if (tab->width_min || tab->dot)
+	if (tab->w_min || tab->dot)
 	{
 		content = tab->plist->content;
 		extra = NULL;
-		len = ft_min(ft_strlen(content), 0, 1);
-		if (tab->dot && (len - tab->width_precision) > 0)
+		len = ft_biggest(ft_strlen(content), 1);
+		if (tab->dot && (len - tab->w_precise) > 0)
 		{
-			content[tab->width_precision] = '\0';
+			content[tab->w_precise] = '\0';
 			tab->iszero = 1;
 		}
 		len = ft_strlen(content);
 		if (tab->plus)
-			len = ft_min(ft_strlen(content), 0, 1);
-		tab->width_min -= len;
-		if (tab->width_min > 0)
+			len = ft_biggest(ft_strlen(content), 1);
+		tab->w_min -= len;
+		if (tab->w_min > 0)
 		{
-			extra = ft_strrep(' ', tab->width_min);
+			extra = ft_strrep(' ', tab->w_min);
 			add_node(tab, extra, tab->dash);
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/11/01 15:51:23 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 16:02:06 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ typedef struct s_print
 	int			dash;
 	int			zero;
 	int			dot;
-	int			width_min;
-	int			width_precision;
+	int			w_min;
+	int			w_precise;
 }				t_print;
 
 int			ft_printf(const char *s, ...);

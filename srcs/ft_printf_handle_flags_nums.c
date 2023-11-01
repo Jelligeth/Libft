@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/01 16:17:12 by dliu          #+#    #+#                 */
-/*   Updated: 2023/01/25 13:54:45 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/01 16:02:24 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	apply_flags_num(t_print *tab)
 	if (tab->plist->content)
 	{
 		len = ft_strlen(tab->plist->content);
-		minpad = tab->width_min - len;
+		minpad = tab->w_min - len;
 		if (tab->dot)
-			apply_num_dot(tab, ft_min(tab->width_precision, len, 0), &minpad);
+			apply_num_dot(tab, ft_biggest(tab->w_precise - len, 0), &minpad);
 		else if (!tab->dash && tab->zero && minpad > 0)
 			apply_num_zero(tab, &minpad);
 		if (tab->count > -1 && tab->hash && !tab->iszero)
@@ -97,7 +97,7 @@ static void	apply_num_zero(t_print *tab, int *pad)
 
 static void	apply_num_dot(t_print *tab, int maxpad, int *minpad)
 {
-	if (tab->iszero && maxpad == 0 && tab->width_precision < 1)
+	if (tab->iszero && maxpad == 0 && tab->w_precise < 1)
 	{
 		free(tab->plist->content);
 		tab->plist->content = NULL;
