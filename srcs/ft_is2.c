@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:17:45 by dliu          #+#    #+#                 */
-/*   Updated: 2023/11/14 17:29:38 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/14 17:32:19 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int	ft_isspace(int c)
 
 int	ft_isquote(int c)
 {
-	if (c == '\'' || c == '\"')
+	if (c == '\'')
 		return (1);
+	if (c == '\"')
+		return (2);
 	return (0);
 }
