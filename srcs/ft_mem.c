@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 15:14:45 by dliu          #+#    #+#                 */
-/*   Updated: 2023/11/01 15:51:20 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/02 14:13:29 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*cdst;
 	const char	*csrc;
 
+	if (!dst || !src)
+		return (NULL);
 	if (dst != src)
 	{
 		cdst = (char *)dst;
@@ -86,6 +88,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char		*cdst;
 	const char	*csrc;
 
+	if (!dst || !src)
+		return (NULL);
 	if (dst != src)
 	{
 		cdst = (char *)dst;
@@ -115,13 +119,16 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*z;
 	unsigned char	ch;
 
-	i = 0;
-	z = (unsigned char *)b;
-	ch = (unsigned char)c;
-	while (i < len)
+	if (b)
 	{
-		z[i] = ch;
-		i++;
+		i = 0;
+		z = (unsigned char *)b;
+		ch = (unsigned char)c;
+		while (i < len)
+		{
+			z[i] = ch;
+			i++;
+		}
 	}
 	return (b);
 }

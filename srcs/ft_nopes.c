@@ -6,21 +6,26 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/12 16:57:09 by dliu          #+#    #+#                 */
-/*   Updated: 2023/11/01 15:21:37 by dliu          ########   odam.nl         */
+/*   Updated: 2023/11/07 15:54:26 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * Prints an error message and exits with exit code EXIT_FAILURE.
- * NULL inputs will be skipped.
-*/
+//Prints an error message to STDERR_FILENO and exits with EXIT_FAILURE.
 void	ft_error(char *errmsg)
 {
 	if (errmsg)
 		ft_putendl_fd(errmsg, STDERR_FILENO);
 	exit(EXIT_FAILURE);
+}
+
+//Prints errmsg to STDERR_FILENO and exits with errcode.
+void	ft_errexit(char *errmsg, int errcode)
+{
+	if (errmsg)
+		ft_putendl_fd(errmsg, STDERR_FILENO);
+	exit(errcode);
 }
 
 /**
