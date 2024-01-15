@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:23 by dliu          #+#    #+#                 */
-/*   Updated: 2023/11/14 17:29:53 by dliu          ########   odam.nl         */
+/*   Updated: 2024/01/15 14:26:25 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,7 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_strrep(const char c, const size_t len);
+char		*ft_strcat_free(char *old, char *join);
 
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));

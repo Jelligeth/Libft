@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_is2.c                                           :+:    :+:            */
+/*   ft_strcat_free.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 14:17:45 by dliu          #+#    #+#                 */
-/*   Updated: 2024/01/15 14:27:35 by dliu          ########   odam.nl         */
+/*   Created: 2024/01/15 14:19:51 by dliu          #+#    #+#                 */
+/*   Updated: 2024/01/15 14:25:48 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(int c)
-{
-	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\r')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
-int	ft_isquote(int c)
+/**
+ * Joins two strings, freeing both inputs and returning a new allocated string.
+*/
+char	*ft_strcat_free(char *old, char *join)
 {
-	if (c == '\'')
-		return (1);
-	if (c == '\"')
-		return (2);
-	return (0);
+	char	*new;
+
+	new = ft_strjoin(old, join);
+	free(old);
+	free(join);
+	return (new);
 }
