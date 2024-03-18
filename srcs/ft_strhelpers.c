@@ -6,7 +6,7 @@
 /*   By: dliu <dliu@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 18:22:25 by dliu          #+#    #+#                 */
-/*   Updated: 2023/11/13 16:16:45 by evoronin      ########   odam.nl         */
+/*   Updated: 2024/01/19 13:19:47 by dliu          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,19 @@ size_t	ft_strlen(const char *s)
 	len = 0;
 	while (s && s[len])
 		len++;
+	return (len);
+}
+
+//Counts continuous recurrances of c
+size_t	ft_charcount(char *str, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] && str[len] == c)
+	{
+		len++;
+	}
 	return (len);
 }
 
