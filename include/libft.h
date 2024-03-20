@@ -80,6 +80,8 @@ void		check_write(t_print *tab);
 
 char		*get_next_line(int fd);
 
+void		ft_put_strarray_fd(char **strarray, int fd);
+
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putstr_col_fd(char *color, char *s, int fd);
