@@ -12,6 +12,8 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
@@ -79,6 +81,7 @@ void		apply_flags_hex(t_print *tab);
 void		check_write(t_print *tab);
 
 char		*get_next_line(int fd);
+char		*ft_read_file(char *filename);
 
 void		ft_put_strarray_fd(char **strarray, int fd);
 

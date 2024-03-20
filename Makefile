@@ -6,7 +6,7 @@
 #    By: dliu <dliu@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/05 15:18:01 by dliu          #+#    #+#                  #
-#    Updated: 2024/03/20 14:04:50 by dliu          ########   odam.nl          #
+#    Updated: 2024/03/20 18:13:01 by dliu          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 HEADERS = -I ./include
 VPATH = srcs/
-SRCS = get_next_line.c \
+SRCS = get_next_line.c ft_read_file.c \
 ft_lstnew.c ft_lstadd.c ft_lstsize.c ft_lstlast.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 ft_printf.c ft_printf_helpers.c ft_printf_handle_types.c \
 ft_printf_handle_flags.c ft_printf_handle_flags_nums.c \
