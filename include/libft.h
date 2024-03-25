@@ -85,10 +85,10 @@ char		*ft_read_file(char *filename);
 
 void		ft_put_strarray_fd(char **strarray, int fd);
 
-void		ft_putchar_fd(char c, int fd);
-void		ft_putstr_fd(char *s, int fd);
-void		ft_putstr_col_fd(char *color, char *s, int fd);
-void		ft_putendl_fd(char *s, int fd);
+void		ft_putchar_fd(const char c, int fd);
+void		ft_putstr_fd(const char *s, int fd);
+void		ft_putstr_col_fd(const char *color, const char *s, int fd);
+void		ft_putendl_fd(const char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
 int			ft_isalpha(int c);
@@ -156,7 +156,7 @@ size_t		ft_distance(int a, int b);
 
 void		ft_error(char *errstr);
 void		ft_errexit(char *errmsg, int errcode);
-void		ft_perror(char *progname, char *funcname, char *messsage);
+void		ft_perror(const char *prog, const char *func, const char *msg);
 
 void		ft_free(void *content);
 void		ft_free_strarr(char **array);

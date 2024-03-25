@@ -32,18 +32,18 @@ void	ft_errexit(char *errmsg, int errcode)
  * Prints an error message based on inputs. 
  * NULL inputs will be skipped.
 */
-void	ft_perror(char *progname, char *funcname, char *messsage)
+void	ft_perror(const char *prog, const char *func, const char *msg)
 {
-	if (progname)
+	if (prog)
 	{
-		ft_putstr_fd(progname, STDERR_FILENO);
+		ft_putstr_fd(prog, STDERR_FILENO);
 		ft_putstr_fd(": ", STDERR_FILENO);
 	}
-	if (funcname)
+	if (func)
 	{
-		ft_putstr_fd(funcname, STDERR_FILENO);
+		ft_putstr_fd(func, STDERR_FILENO);
 		ft_putstr_fd(": ", STDERR_FILENO);
 	}
-	if (messsage)
-		ft_putendl_fd(messsage, STDERR_FILENO);
+	if (msg)
+		ft_putendl_fd(func, STDERR_FILENO);
 }
