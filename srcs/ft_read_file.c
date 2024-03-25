@@ -13,7 +13,8 @@
 #include "libft.h"
 
 /**
- * Reads the entire file at @param filename and returns it as a string.
+ * Reads the entire file at 
+ * @param filename and returns it as a string.
 */
 char	*ft_read_file(char *filename)
 {

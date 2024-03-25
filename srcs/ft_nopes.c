@@ -45,5 +45,5 @@ void	ft_perror(const char *prog, const char *func, const char *msg)
 		ft_putstr_fd(": ", STDERR_FILENO);
 	}
 	if (msg)
-		ft_putendl_fd(func, STDERR_FILENO);
+		ft_putendl_fd(msg, STDERR_FILENO);
 }
